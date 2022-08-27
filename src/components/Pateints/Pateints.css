@@ -1,0 +1,14 @@
+table {
+  font-family: system-ui;
+  border-collapse: collapse;
+  width: 100%;
+  background: #215885;
+  color: white;
+}
+  
+td, th {
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 8px;
+    min-width: 90px!important;
+}
