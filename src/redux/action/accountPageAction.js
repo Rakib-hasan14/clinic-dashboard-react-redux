@@ -3,15 +3,15 @@ import axios from 'axios'
 
 
 export const fetchAccountPageData = () => async(dispatch) => {
-    const response = await axios.get(`https://clinic-managements.herokuapp.com/clinic/account`)
+    const response = await axios.get(`https://clinic-management-dashboard-backend.vercel.app//clinic/account`)
 
     dispatch({type: actionTypesAccounts.GET_ACCOUNT_DATA, payload: response.data})
 }  
 
 
 export const fetchAllData = () => async(dispatch) => {
-    const staff = await axios.get(`https://clinic-managements.herokuapp.com/clinic/staffs`)
-    const doctor = await axios.get(`https://clinic-managements.herokuapp.com/clinic/doctors`)
+    const staff = await axios.get(`https://clinic-management-dashboard-backend.vercel.app//clinic/staffs`)
+    const doctor = await axios.get(`https://clinic-management-dashboard-backend.vercel.app//clinic/doctors`)
 
 
     const data = {
@@ -24,7 +24,7 @@ export const fetchAllData = () => async(dispatch) => {
 
 
 export const AddPaymentAction = (data) => async(dispatch) => {
-    const response = await axios.post(`https://clinic-managements.herokuapp.com/clinic/account/send`,data)
+    const response = await axios.post(`https://clinic-management-dashboard-backend.vercel.app//clinic/account/send`,data)
 
     dispatch({type: actionTypesAccounts.ADD_TRX, payload: response.data})
 
